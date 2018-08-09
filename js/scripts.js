@@ -4,11 +4,14 @@ $(document).ready(function() {
   var animalInput = $("input:radio[name=animal]:checked").val();
 
 if(animalInput === "turtles") {
-  $("#turtles").show();
+  $("#turtles").toggle();
+  $("#turtles").siblings().hide();
 } else if (animalInput === "snakes") {
-  $("#snakes").show();
+  $("#snakes").toggle();
+  $("#snakes").siblings().hide();
 } else if (animalInput === "monkeys") {
-  $("#monkeys").show();
+  $("#monkeys").toggle();
+  $("#monkeys").siblings().hide();
 }
 
   event.preventDefault();
