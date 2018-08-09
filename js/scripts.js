@@ -1,10 +1,15 @@
 $(document).ready(function() {
 
-  $("#formOne").click(function() {
+  $("#formOne").click(function(event) {
   var animalInput = $("input:radio[name=animal]:checked").val();
 
-
-  $("#animalfacts").show();
+if(animalInput === "turtles") {
+  $("#turtles").show();
+} else if (animalInput === "snakes") {
+  $("#snakes").show();
+} else if (animalInput === "monkeys") {
+  $("#monkeys").show();
+}
 
   event.preventDefault();
   });
